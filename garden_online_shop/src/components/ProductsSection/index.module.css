@@ -1,0 +1,9 @@
+.prod_text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    display: flex;
+    justify-content: start;
+    margin: 20px 0;
+}

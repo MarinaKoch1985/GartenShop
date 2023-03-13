@@ -1,0 +1,31 @@
+.product_card {
+    /* display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid transparent;
+    width: 218px;
+    height: 350px;
+    position: relative;*/
+    margin: 20px 20px 100px 20px; 
+    position: relative;
+
+}
+
+
+
+.image {
+    width: 318px;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 35px;
+    margin: 5px;
+}
+
+

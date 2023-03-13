@@ -1,0 +1,15 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.categories h1 {
+    display: flex;
+    justify-content: start;
+
+    margin: auto;
+    padding: 33px 10px;
+
+    font-size: 40px;
+    font-weight: 700;
+}

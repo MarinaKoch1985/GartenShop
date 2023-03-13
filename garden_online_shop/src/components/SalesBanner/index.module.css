@@ -1,0 +1,76 @@
+.sales_banner {
+    background-color: rgba(161, 226, 235, 1);
+    margin: auto;
+    width: 1440px;
+    height: 600px;
+    position: relative;   
+    font-family: Montserrat;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700px;
+    line-height: 130%;
+    color: #FFFFFF;
+    
+}
+
+.title_sale {
+    position: absolute;
+    width: 540px;
+    height: 104px;
+    left: 50px;
+    top: 197px;
+    font-size: 80px;
+    
+}
+
+.about_sale {
+   position: absolute;
+   width: 749px;
+   height: 104px;
+   left: 50px;
+   top: 297px; 
+   font-size: 60px;
+
+}
+
+.sales_banner button {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    gap: 10px;
+    width: 244px;
+    padding: 25px 50px;
+    border-radius: 13px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.button_promotions {
+    position: absolute;
+    left: 50px;
+    top: 397px; 
+    color: black;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+
+}
+
+.button_more {
+    position: absolute;
+    left: 350px;
+    top: 397px; 
+    background-color: rgba(161, 226, 235, 1);
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+
+}
+
+.sales_banner img {
+    width: 650px;
+    height: 679px;
+    position: absolute;
+    bottom: 10px;
+    left: 789px;  
+}
