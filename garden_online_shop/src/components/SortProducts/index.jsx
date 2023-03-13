@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from "react-router-dom";
-import { sortProductsCategory, searchProductsPrice } from '../../store/reducers/products_category'
+import { sortProducts, searchPrice } from '../../store/reducers/products'
 import s from './index.module.css'
 
 export default function SortProducts() {
@@ -16,7 +16,7 @@ export default function SortProducts() {
     const [max, setMax] = useState(Infinity);
 
     const sort_products = event => {
-    dispatch(sortProductsCategory(event.target.value));
+    dispatch(sortProducts(event.target.value));
 };
 
     
@@ -31,17 +31,17 @@ export default function SortProducts() {
 
     const search_products = event => {
         event.preventDefault();
-        dispatch(searchProductsPrice({ min, max}));
+        dispatch(searchPrice({ min, max}));
     };
 
     const changeMin = event => {
         setMin(event.target.value);
-        dispatch(searchProductsPrice({min: event.target.value, max}));
+        dispatch(searchPrice({min: event.target.value, max}));
     };
 
     const changeMax = event => {
         setMax(event.target.value);
-        dispatch(searchProductsPrice({min, max: event.target.value}));
+        dispatch(searchPrice({min, max: event.target.value}));
     };
 
     

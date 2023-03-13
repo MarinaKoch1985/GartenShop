@@ -29,19 +29,18 @@ export const productsCategoryReducer = (state = defaultState, action) => {
     } else if (action.payload === 'title') {
         return [...state].sort((a, b) => a.title.localeCompare(b.title))
     }else {
-        return state;
+        return state
     }
 } else if (action.type === SEARCH_PRODUCTS_PRICE){
-    return [...state].map((el) => {
-        if (
-          el.discont_price >= action.payload.min &&
-          el.discont_price <= action.payload.max
-        ) {
-          return { ...el, hide: false };
-        } else {
-          return { ...el, hide: true };
-        }
-      });
+        const { min_value, max_value } = action.payload;
+            return state.map(el => {
+                if (el.price >= min_value && el.price <= max_value) {
+                    el.hide = false
+                } else {
+                    el.hide = true
+                }
+                return el
+            })
         }  else {
             return state
         }
