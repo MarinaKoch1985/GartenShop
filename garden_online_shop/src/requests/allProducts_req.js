@@ -1,7 +1,13 @@
-import { loadAllProducts } from "../store/reducers/all_products" 
+import { loadProducts } from "../store/reducers/products" 
  
  export const load_all_products = dispatch => {
      fetch('http://localhost:3333/products/all') 
      .then(resp => resp.json())
-     .then(json => dispatch(loadAllProducts(json)))
- }
+     .then(json => {
+        const payloud = json.map(el => ({ 
+            ...el,
+            hide: false
+    }))
+    dispatch(loadProducts(payloud))
+    })
+}

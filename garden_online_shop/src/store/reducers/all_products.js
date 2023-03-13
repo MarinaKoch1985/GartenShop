@@ -1,15 +1,42 @@
-const defaultState = [];
+// const defaultState = [];
+// let firstState = [];
 
-const LOAD_ALL_PRODUCTS = 'LOAD_ALL_PRODUCTS';
+// const LOAD_ALL_PRODUCTS = 'LOAD_ALL_PRODUCTS';
+// const SORT_PRODUCTS = 'SORT_PRODUCTS';
+// const SEARCH_PRICE = 'SEARCH_PRICE';
 
-export const loadAllProducts = payload => ({
-    type: LOAD_ALL_PRODUCTS, payload});
+// export const loadAllProducts = payload => ({
+//     type: LOAD_ALL_PRODUCTS, payload});
 
-export const allProductsReducer = (state = defaultState, action) => {
-    if (action.type === LOAD_ALL_PRODUCTS){
-        return action.payload
-    } else {
-        return state 
-    }
-   
-}
+// export const sortProducts = payload =>({ 
+//     type: SORT_PRODUCTS, payload});
+
+// export const searchPrice = payload => ({ 
+//     type: SEARCH_PRICE, payload});
+
+// export const allProductsReducer = (state = defaultState, action) => {
+//     if (action.type === LOAD_ALL_PRODUCTS){
+//         firstState = action.payload
+//         return action.payload
+//     } else if (action.type === SORT_PRODUCTS) {
+//         if (action.payload === 'default') {
+//             return firstState
+//         } else if (typeof state[0][action.payload] === 'string') {
+//         return [...state].sort((a, b) => a[action.payload].localeCompare(b[action.payload]))
+//         } else {
+//         return [...state].sort((a,b) => a[action.payload] - b[action.payload])
+//         }
+//     } else if (action.type === SEARCH_PRICE){
+//         const { min_value, max_value } = action.payload;
+//         return state.map(el => {
+//           if (el.discont_price >= min_value && el.discont_price <= max_value){
+//             el.hide = false
+//           } else {
+//             el.hide = true
+//           }
+//           return el
+//         })
+//     } else {
+//        return state   
+//     }
+// }

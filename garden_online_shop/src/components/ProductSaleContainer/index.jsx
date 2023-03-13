@@ -1,10 +1,8 @@
 import React from 'react'
 import { useEffect} from 'react'
-import { useParams } from 'react-router-dom'
-//import { load_all_products } from '../../requests/allProducts_req'
+import { load_all_products } from '../../requests/allProducts_req'
 import ProductSaleCard from '../ProductSaleCard'
-import ProductDescrCard from '../ProductDescrCard'
-import { load_products_category } from '../../requests/products_category'
+//import { load_products_category } from '../../requests/products_category'
 import { useSelector, useDispatch } from 'react-redux';
 import s from './index.module.css'
 
@@ -12,10 +10,10 @@ import s from './index.module.css'
 export default function ProductSaleContainer() {
  
     const dispatch = useDispatch();
-    const products = useSelector(state => state.products_category);
+    const products = useSelector(state => state.products);
 
     useEffect(() => {
-        dispatch(load_products_category)
+        dispatch(load_all_products)
     }, [])
  
     return (
